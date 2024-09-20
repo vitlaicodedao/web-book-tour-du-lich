@@ -24,7 +24,7 @@
             <li class="hm"><a href="admin/index.php">Đăng nhập Admin</a></li>
         </ul>
         <ul class="tp-hd-rgt wow fadeInRight animated" data-wow-delay=".5s">
-            <li class="tol">Phone : 0935169XXX</li>
+            <li class="tol">Phone : 0777336638</li>
             <li class="sig"><a href="#" data-toggle="modal" data-target="#myModal">Đăng kí</a></li>
             <li class="sigi"><a href="#" data-toggle="modal" data-target="#myModal4">/ Đăng nhập</a></li>
         </ul>
@@ -39,15 +39,6 @@
         <div class="logo wow fadeInDown animated" data-wow-delay=".5s">
             <a href="index.php">Hệ thống quản lý<span> Tour Du Lịch</span></a>
         </div>
-
-        <!-- <div class="lock fadeInDown animated" data-wow-delay=".5s">
-            <li><i class="fa fa-lock"></i></li>
-            <li>
-                <div class="securetxt">SAFE &amp; SECURE </div>
-            </li>
-            <div class="clearfix"></div>
-        </div> -->
-        <!-- <div class="clearfix"></div> -->
     </div>
 </div>
 <!--- /header ---->
@@ -70,17 +61,19 @@
                 <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
                     <nav class="cl-effect-1">
                         <ul class="nav navbar-nav">
-                            <li><a href="index.php">Home</a></li>
-                            <li><a href="page.php?type=aboutus">About</a></li>
-                            <li><a href="package-list.php">Tour Packages</a></li>
-                            <li><a href="page.php?type=privacy">Privacy Policy</a></li>
-                            <li><a href="page.php?type=terms">Terms of Use</a></li>
-                            <li><a href="page.php?type=contact">Contact Us</a></li>
+                            <li><a href="index.php">Trang Chủ</a></li>
+                            <li><a href="page.php?type=aboutus">Chi tiết</a></li>
+                            <li><a href="package-list.php">Gói du lịch</a></li>
+                            <li><a href="page.php?type=privacy">Chính sách bảo mật</a></li>
+                            <li><a href="page.php?type=terms">Điều khoản sử dụng</a></li>
+                            <li><a href="page.php?type=contact">Thông tin liên hệ</a></li>
                             <?php if($_SESSION['login'])
 {?>
-                            <li>Need Help?<a href="#" data-toggle="modal" data-target="#myModal3"> / Write Us </a> </li>
+                            <li>Cần trợ giúp?<a href="#" data-toggle="modal" data-target="#myModal3"> / Viết cho chúng
+                                    tôi </a>
+                            </li>
                             <?php } else { ?>
-                            <li><a href="enquiry.php"> Enquiry </a> </li>
+                            <li><a href="enquiry.php"> Góp ý </a> </li>
                             <?php } ?>
                             <div class="clearfix"></div>
 

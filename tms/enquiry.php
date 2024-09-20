@@ -93,38 +93,38 @@ $error="Something went wrong. Please try again";
         <div class="privacy">
             <div class="container">
                 <h3 class="wow fadeInDown animated animated" data-wow-delay=".5s"
-                    style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Enquiry Form
-                    Password</h3>
+                    style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Xin cảm ơn đóng góp
+                    của bạn</h3>
                 <form name="enquiry" method="post">
                     <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?>
                     </div><?php } 
 				else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
-                    <p style="width: 350px;">
+                    <p style="width: 450px;">
 
-                        <b>Full name</b> <input type="text" name="fname" class="form-control" id="fname"
-                            placeholder="Full Name" required="">
+                        <b>Tên đầy đủ</b> <input type="text" name="fname" class="form-control" id="fname"
+                            placeholder="Tên đầy đủ" required="">
                     </p>
-                    <p style="width: 350px;">
+                    <p style="width: 450px;">
                         <b>Email</b> <input type="email" name="email" class="form-control" id="email"
-                            placeholder="Valid Email id" required="">
+                            placeholder="Email" required="">
                     </p>
 
-                    <p style="width: 350px;">
-                        <b>Mobile No</b> <input type="text" name="mobileno" class="form-control" id="mobileno"
-                            maxlength="10" placeholder="10 Digit mobile No" required="">
+                    <p style="width: 450px;">
+                        <b>Số điện thoại</b> <input type="text" name="mobileno" class="form-control" id="mobileno"
+                            maxlength="10" placeholder="Số điện thoại (10 số)" required="">
                     </p>
 
-                    <p style="width: 350px;">
-                        <b>Subject</b> <input type="text" name="subject" class="form-control" id="subject"
-                            placeholder="Subject" required="">
+                    <p style="width: 450px;">
+                        <b>Chủ đề</b> <input type="text" name="subject" class="form-control" id="subject"
+                            placeholder="Chủ đề" required="">
                     </p>
-                    <p style="width: 350px;">
-                        <b>Description</b> <textarea name="description" class="form-control" rows="6" cols="50"
-                            id="description" placeholder="Description" required=""></textarea>
+                    <p style="width: 450px;">
+                        <b>Mô tả</b> <textarea name="description" class="form-control" rows="6" cols="50"
+                            id="description" placeholder="Mô tả" required=""></textarea>
                     </p>
 
-                    <p style="width: 350px;">
-                        <button type="submit" name="submit1" class="btn-primary btn">Submit</button>
+                    <p style="width: 450px;">
+                        <button type="submit" name="submit1" class="btn-primary btn">Gửi</button>
                     </p>
                 </form>
 
