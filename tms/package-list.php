@@ -37,7 +37,7 @@ include('includes/config.php');
     <div class="banner-3">
         <div class="container">
             <h1 class="wow zoomIn animated animated" data-wow-delay=".5s"
-                style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"> TMS- Package List</h1>
+                style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"> TMS - Các gói du lịch</h1>
         </div>
     </div>
     <!--- /banner ---->
@@ -46,7 +46,7 @@ include('includes/config.php');
         <div class="container">
 
             <div class="room-bottom">
-                <h3>Package List</h3>
+                <h3>Các gói du lịch</h3>
 
 
                 <?php $sql = "SELECT * from tbltourpackages";
@@ -94,8 +94,6 @@ include('includes/config.php');
     <?php include('includes/signin.php'); ?>
     <!-- //signin -->
     <!-- write us -->
-    <?php include('includes/write-us.php'); ?>
-    <!-- //write us -->
 </body>
 
 </html>

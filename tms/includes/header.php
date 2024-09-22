@@ -1,35 +1,35 @@
 <?php if ($_SESSION['login']) { ?>
-<div class="top-header">
-    <div class="container">
-        <ul class="tp-hd-lft wow fadeInLeft animated" data-wow-delay=".5s">
-            <li class="hm"><a href="index.html"><i class="fa fa-home"></i></a></li>
-            <li class="prnt"><a href="profile.php">My Profile</a></li>
-            <li class="prnt"><a href="change-password.php">Change Password</a></li>
-            <li class="prnt"><a href="tour-history.php">My Tour History</a></li>
-            <li class="prnt"><a href="issuetickets.php">Raised Tickets</a></li>
-        </ul>
-        <ul class="tp-hd-rgt wow fadeInRight animated" data-wow-delay=".5s">
-            <li class="tol">Welcome :</li>
-            <li class="sig"><?php echo htmlentities($_SESSION['login']); ?></li>
-            <li class="sigi"><a href="logout.php">/ Logout</a></li>
-        </ul>
-        <div class="clearfix"></div>
+    <div class="top-header">
+        <div class="container">
+            <ul class="tp-hd-lft wow fadeInLeft animated" data-wow-delay=".5s">
+                <li class="hm"><a href="index.php"><i class="fa fa-home"></i></a></li>
+                <li class="prnt"><a href="profile.php">Trang cá nhân</a></li>
+                <li class="prnt"><a href="change-password.php">Thay đổi mật khẩu</a></li>
+                <li class="prnt"><a href="tour-history.php">Tour đã đặt</a></li>
+                <!-- <li class="prnt"><a href="issuetickets.php">Góp ý đã gửi</a></li> -->
+            </ul>
+            <ul class="tp-hd-rgt wow fadeInRight animated" data-wow-delay=".5s">
+                <li class="tol">Welcome :</li>
+                <li class="sig"><?php echo htmlentities($_SESSION['login']); ?></li>
+                <li class="sigi"><a href="logout.php">/ Đăng xuất</a></li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </div><?php } else { ?>
+    <div class="top-header">
+        <div class="container">
+            <ul class="tp-hd-lft wow fadeInLeft animated" data-wow-delay=".5s">
+                <li class="hm"><a href="index.php"><i class="fa fa-home"></i></a></li>
+                <li class="hm"><a href="admin/index.php">Đăng nhập Admin</a></li>
+            </ul>
+            <ul class="tp-hd-rgt wow fadeInRight animated" data-wow-delay=".5s">
+                <li class="tol">Phone : 0777336638</li>
+                <li class="sig"><a href="#" data-toggle="modal" data-target="#myModal">Đăng kí</a></li>
+                <li class="sigi"><a href="#" data-toggle="modal" data-target="#myModal4">/ Đăng nhập</a></li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
     </div>
-</div><?php } else { ?>
-<div class="top-header">
-    <div class="container">
-        <ul class="tp-hd-lft wow fadeInLeft animated" data-wow-delay=".5s">
-            <li class="hm"><a href="index.php"><i class="fa fa-home"></i></a></li>
-            <li class="hm"><a href="admin/index.php">Đăng nhập Admin</a></li>
-        </ul>
-        <ul class="tp-hd-rgt wow fadeInRight animated" data-wow-delay=".5s">
-            <li class="tol">Phone : 0777336638</li>
-            <li class="sig"><a href="#" data-toggle="modal" data-target="#myModal">Đăng kí</a></li>
-            <li class="sigi"><a href="#" data-toggle="modal" data-target="#myModal4">/ Đăng nhập</a></li>
-        </ul>
-        <div class="clearfix"></div>
-    </div>
-</div>
 <?php } ?>
 <!--- /top-header ---->
 <!--- header ---->
@@ -66,14 +66,10 @@
                             <li><a href="privacy.php">Chính sách bảo mật</a></li>
                             <li><a href="terms.php">Điều khoản sử dụng</a></li>
                             <li><a href="contact.php">Thông tin liên hệ</a></li>
-                            <?php if ($_SESSION['login']) { ?>
-                            <li>Cần trợ giúp?<a href="#" data-toggle="modal" data-target="#myModal3"> / Viết cho chúng
-                                    tôi </a>
-                            </li>
-                            <?php } else { ?>
-                            <li><a href="enquiry.php"> Góp ý </a> </li>
-                            <?php } ?>
-                            <div class="clearfix"></div>
+
+                            <li><a href="enquiry.php"> Góp ý </a>
+                            <li>
+                                <div class="clearfix"></div>
 
                         </ul>
                     </nav>

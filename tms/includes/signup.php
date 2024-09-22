@@ -1,43 +1,43 @@
 <?php
 error_reporting(0);
 if (isset($_POST['submit'])) {
-	$fname = $_POST['fname'];
-	$mnumber = $_POST['mobilenumber'];
-	$email = $_POST['email'];
-	$password = md5($_POST['password']);
-	$sql = "INSERT INTO  tblusers(FullName,MobileNumber,EmailId,Password) VALUES(:fname,:mnumber,:email,:password)";
-	$query = $dbh->prepare($sql);
-	$query->bindParam(':fname', $fname, PDO::PARAM_STR);
-	$query->bindParam(':mnumber', $mnumber, PDO::PARAM_STR);
-	$query->bindParam(':email', $email, PDO::PARAM_STR);
-	$query->bindParam(':password', $password, PDO::PARAM_STR);
-	$query->execute();
-	$lastInsertId = $dbh->lastInsertId();
-	if ($lastInsertId) {
-		$_SESSION['msg'] = "You are Scuccessfully registered. Now you can login ";
-		header('location:thankyou.php');
-	} else {
-		$_SESSION['msg'] = "Something went wrong. Please try again.";
-		header('location:thankyou.php');
-	}
+    $fname = $_POST['fname'];
+    $mnumber = $_POST['mobilenumber'];
+    $email = $_POST['email'];
+    $password = md5($_POST['password']);
+    $sql = "INSERT INTO  tblusers(FullName,MobileNumber,EmailId,Password) VALUES(:fname,:mnumber,:email,:password)";
+    $query = $dbh->prepare($sql);
+    $query->bindParam(':fname', $fname, PDO::PARAM_STR);
+    $query->bindParam(':mnumber', $mnumber, PDO::PARAM_STR);
+    $query->bindParam(':email', $email, PDO::PARAM_STR);
+    $query->bindParam(':password', $password, PDO::PARAM_STR);
+    $query->execute();
+    $lastInsertId = $dbh->lastInsertId();
+    if ($lastInsertId) {
+        $_SESSION['msg'] = "You are successfully registered. Now you can login.";
+        echo "<script type='text/javascript'> document.location = 'thankyou.php'; </script>";
+    } else {
+        $_SESSION['msg'] = "Something went wrong. Please try again.";
+        echo "<script type='text/javascript'> document.location = 'thankyou.php'; </script>";
+    }
 }
 ?>
 <!--Javascript for check email availabilty-->
 <script>
-function checkAvailability() {
+    function checkAvailability() {
 
-    $("#loaderIcon").show();
-    jQuery.ajax({
-        url: "check_availability.php",
-        data: 'emailid=' + $("#email").val(),
-        type: "POST",
-        success: function(data) {
-            $("#user-availability-status").html(data);
-            $("#loaderIcon").hide();
-        },
-        error: function() {}
-    });
-}
+        $("#loaderIcon").show();
+        jQuery.ajax({
+            url: "check_availability.php",
+            data: 'emailid=' + $("#email").val(),
+            type: "POST",
+            success: function(data) {
+                $("#user-availability-status").html(data);
+                $("#loaderIcon").hide();
+            },
+            error: function() {}
+        });
+    }
 </script>
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

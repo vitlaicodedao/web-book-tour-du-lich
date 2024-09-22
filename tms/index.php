@@ -53,7 +53,7 @@ include('includes/config.php');
 
 
 
-            <h3>Package List</h3>
+            <h3>Các gói du lịch</h3>
 
 
             <?php $sql = "SELECT * from tbltourpackages order by rand() limit 4";
@@ -69,10 +69,10 @@ include('includes/config.php');
                                 class="img-responsive" alt="">
                         </div>
                         <div class="col-md-6 room-midle wow fadeInUp animated" data-wow-delay=".5s">
-                            <h4>Package Name: <?php echo htmlentities($result->PackageName); ?></h4>
-                            <h6>Package Type : <?php echo htmlentities($result->PackageType); ?></h6>
-                            <p><b>Package Location :</b> <?php echo htmlentities($result->PackageLocation); ?></p>
-                            <p><b>Features</b> <?php echo htmlentities($result->PackageFetures); ?></p>
+                            <h4><?php echo htmlentities($result->PackageName); ?></h4>
+                            <h6>Loại hình: <?php echo htmlentities($result->PackageType); ?></h6>
+                            <p><b>Địa chỉ: </b> <?php echo htmlentities($result->PackageLocation); ?></p>
+                            <p><b>Đặc trưng</b> <?php echo htmlentities($result->PackageFetures); ?></p>
                         </div>
                         <div class="col-md-3 room-right wow fadeInRight animated" data-wow-delay=".5s">
                             <h5>USD <?php echo htmlentities($result->PackagePrice); ?></h5>
@@ -102,7 +102,7 @@ include('includes/config.php');
                 </div>
                 <div class="rou-rgt wow fadeInDown animated" data-wow-delay=".5s">
                     <h3>80000</h3>
-                    <p>Enquiries</p>
+                    <p>Ý kiến phản hồi</p>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -112,7 +112,7 @@ include('includes/config.php');
                 </div>
                 <div class="rou-rgt">
                     <h3>1900</h3>
-                    <p>Registered users</p>
+                    <p>Người dùng</p>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -138,8 +138,6 @@ include('includes/config.php');
     <?php include('includes/signin.php'); ?>
     <!-- //signin -->
     <!-- write us -->
-    <?php include('includes/write-us.php'); ?>
-    <!-- //write us -->
 </body>
 
 </html>

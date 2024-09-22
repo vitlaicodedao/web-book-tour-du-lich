@@ -18,7 +18,7 @@ if (isset($_POST['submit1'])) {
     $query->execute();
     $lastInsertId = $dbh->lastInsertId();
     if ($lastInsertId) {
-        $msg = "Enquiry  Successfully submited";
+        $msg = "Enquiry successfully submited";
     } else {
         $error = "Something went wrong. Please try again";
     }
@@ -91,8 +91,11 @@ if (isset($_POST['submit1'])) {
                     style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Xin cảm ơn đóng góp
                     của bạn</h3>
                 <form name="enquiry" method="post">
-                    <?php if ($error) { ?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?>
-                        </div><?php } else if ($msg) { ?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php } ?>
+                    <?php if ($error) { ?><div class="errorWrap">
+                            <strong>ERROR</strong>:<?php echo htmlentities($error); ?>
+                        </div><?php } else if ($msg) { ?><div class="succWrap">
+                            <strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?>
+                        </div><?php } ?>
                     <p style="width: 450px;">
 
                         <b>Tên đầy đủ</b> <input type="text" name="fname" class="form-control" id="fname"
@@ -135,8 +138,6 @@ if (isset($_POST['submit1'])) {
         <!-- signin -->
         <?php include('includes/signin.php'); ?>
         <!-- //signin -->
-        <!-- write us -->
-        <?php include('includes/write-us.php'); ?>
 </body>
 
 </html>

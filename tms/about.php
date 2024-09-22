@@ -18,7 +18,7 @@ if (isset($_POST['submit1'])) {
     $query->execute();
     $lastInsertId = $dbh->lastInsertId();
     if ($lastInsertId) {
-        $msg = "Enquiry  Successfully submited";
+        $msg = "Enquiry successfully submitted";
     } else {
         $error = "Something went wrong. Please try again";
     }
@@ -148,8 +148,6 @@ if (isset($_POST['submit1'])) {
         <!-- signin -->
         <?php include('includes/signin.php'); ?>
         <!-- //signin -->
-        <!-- write us -->
-        <?php include('includes/write-us.php'); ?>
 </body>
 
 </html>

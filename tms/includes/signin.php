@@ -13,7 +13,6 @@ if (isset($_POST['signin'])) {
 		$_SESSION['login'] = $_POST['email'];
 		echo "<script type='text/javascript'> document.location = 'package-list.php'; </script>";
 	} else {
-
 		echo "<script>alert('Invalid Details');</script>";
 	}
 }
