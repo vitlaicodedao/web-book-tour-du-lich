@@ -1,0 +1,129 @@
+<?php
+session_start();
+error_reporting(0);
+include('includes/config.php');
+if (isset($_POST['submit1'])) {
+    $fname = $_POST['fname'];
+    $email = $_POST['email'];
+    $mobile = $_POST['mobileno'];
+    $subject = $_POST['subject'];
+    $description = $_POST['description'];
+    $sql = "INSERT INTO  tblenquiry(FullName,EmailId,MobileNumber,Subject,Description) VALUES(:fname,:email,:mobile,:subject,:description)";
+    $query = $dbh->prepare($sql);
+    $query->bindParam(':fname', $fname, PDO::PARAM_STR);
+    $query->bindParam(':email', $email, PDO::PARAM_STR);
+    $query->bindParam(':mobile', $mobile, PDO::PARAM_STR);
+    $query->bindParam(':subject', $subject, PDO::PARAM_STR);
+    $query->bindParam(':description', $description, PDO::PARAM_STR);
+    $query->execute();
+    $lastInsertId = $dbh->lastInsertId();
+    if ($lastInsertId) {
+        $msg = "Enquiry  Successfully submited";
+    } else {
+        $error = "Something went wrong. Please try again";
+    }
+}
+
+?>
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>TMS | Hệ thống quản lý Tour Du Lịch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Hệ thống quản lý Tour Du Lịch In PHP" />
+    <script type="applijewelleryion/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+    </script>
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- Custom Theme files -->
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--animate-->
+    <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <style>
+        .errorWrap {
+            padding: 10px;
+            margin: 0 0 20px 0;
+            background: #fff;
+            border-left: 4px solid #dd3d36;
+            -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+        }
+
+        .succWrap {
+            padding: 10px;
+            margin: 0 0 20px 0;
+            background: #fff;
+            border-left: 4px solid #5cb85c;
+            -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- top-header -->
+    <div class="top-header">
+        <?php include('includes/header.php'); ?>
+        <div class="banner-1 ">
+            <div class="container">
+                <h1 class="wow zoomIn animated animated" data-wow-delay=".5s"
+                    style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">TMS-Tourism Management
+                    System</h1>
+            </div>
+        </div>
+        <!--- /banner-1 ---->
+        <!--- privacy ---->
+        <div class="privacy">
+            <div class="container">
+                <h3 class="wow fadeInDown animated animated" data-wow-delay=".5s"
+                    style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Điều khoản sử dụng
+                </h3>
+
+                <p>Chào mừng bạn đến với trang web của chúng tôi. Khi truy cập và sử dụng trang web, bạn đồng ý với các
+                    điều khoản và điều kiện sau:</p>
+
+                <div class="section-title">1. Sử dụng trang web</div>
+                <p>Bạn phải tuân theo tất cả các luật pháp, quy định hiện hành và không được sử dụng trang web này cho
+                    bất kỳ mục đích bất hợp pháp nào.</p>
+
+                <div class="section-title">2. Quyền sở hữu</div>
+                <p>Nội dung trên trang web này thuộc quyền sở hữu của chúng tôi và được bảo vệ bởi luật bản quyền và các
+                    luật liên quan khác.</p>
+
+                <div class="section-title">3. Thay đổi điều khoản</div>
+                <p>Chúng tôi có quyền thay đổi các điều khoản này bất cứ lúc nào mà không cần thông báo trước. Bạn cần
+                    kiểm tra thường xuyên để cập nhật các thay đổi.</p>
+
+                <div class="section-title">4. Giới hạn trách nhiệm</div>
+                <p>Chúng tôi không chịu trách nhiệm về bất kỳ thiệt hại nào phát sinh từ việc sử dụng hoặc không thể sử
+                    dụng trang web này.</p>
+
+            </div>
+        </div>
+        <!--- /privacy ---->
+        <!--- footer-top ---->
+        <!--- /footer-top ---->
+        <?php include('includes/footer.php'); ?>
+        <!-- signup -->
+        <?php include('includes/signup.php'); ?>
+        <!-- //signu -->
+        <!-- signin -->
+        <?php include('includes/signin.php'); ?>
+        <!-- //signin -->
+        <!-- write us -->
+        <?php include('includes/write-us.php'); ?>
+</body>
+
+</html>

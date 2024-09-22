@@ -26,13 +26,13 @@ include('includes/config.php');
     <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
     <script src="js/wow.min.js"></script>
     <script>
-    new WOW().init();
+        new WOW().init();
     </script>
     <!--//end-animate-->
 </head>
 
 <body>
-    <?php include('includes/header.php');?>
+    <?php include('includes/header.php'); ?>
     <div class="banner-1 ">
         <div class="container">
             <h1 class="wow zoomIn animated animated" data-wow-delay=".5s"
@@ -50,7 +50,7 @@ include('includes/config.php');
                     style="visibility: visible; animation-duration: 1200ms; animation-delay: 500ms; animation-name: fadeInUp;">
 
 
-                    <h4> <?php echo htmlentities($_SESSION['msg']);?></h4>
+                    <h4> <?php echo htmlentities($_SESSION['msg']); ?></h4>
 
                 </div>
 
@@ -58,14 +58,14 @@ include('includes/config.php');
             </div>
         </div>
         <!--- /contact ---->
-        <?php include('includes/footer.php');?>
+        <?php include('includes/footer.php'); ?>
         <!-- sign -->
-        <?php include('includes/signup.php');?>
+        <?php include('includes/signup.php'); ?>
         <!-- signin -->
-        <?php include('includes/signin.php');?>
+        <?php include('includes/signin.php'); ?>
         <!-- //signin -->
         <!-- write us -->
-        <?php include('includes/write-us.php');?>
+        <?php include('includes/write-us.php'); ?>
         <!-- //write us -->
 </body>
 

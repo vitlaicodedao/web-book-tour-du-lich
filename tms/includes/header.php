@@ -1,5 +1,4 @@
-<?php if($_SESSION['login'])
-{?>
+<?php if ($_SESSION['login']) { ?>
 <div class="top-header">
     <div class="container">
         <ul class="tp-hd-lft wow fadeInLeft animated" data-wow-delay=".5s">
@@ -11,12 +10,12 @@
         </ul>
         <ul class="tp-hd-rgt wow fadeInRight animated" data-wow-delay=".5s">
             <li class="tol">Welcome :</li>
-            <li class="sig"><?php echo htmlentities($_SESSION['login']);?></li>
+            <li class="sig"><?php echo htmlentities($_SESSION['login']); ?></li>
             <li class="sigi"><a href="logout.php">/ Logout</a></li>
         </ul>
         <div class="clearfix"></div>
     </div>
-</div><?php } else {?>
+</div><?php } else { ?>
 <div class="top-header">
     <div class="container">
         <ul class="tp-hd-lft wow fadeInLeft animated" data-wow-delay=".5s">
@@ -31,7 +30,7 @@
         <div class="clearfix"></div>
     </div>
 </div>
-<?php }?>
+<?php } ?>
 <!--- /top-header ---->
 <!--- header ---->
 <div class="header">
@@ -62,13 +61,12 @@
                     <nav class="cl-effect-1">
                         <ul class="nav navbar-nav">
                             <li><a href="index.php">Trang Chủ</a></li>
-                            <li><a href="page.php?type=aboutus">Chi tiết</a></li>
+                            <li><a href="about.php">Chi tiết</a></li>
                             <li><a href="package-list.php">Gói du lịch</a></li>
-                            <li><a href="page.php?type=privacy">Chính sách bảo mật</a></li>
-                            <li><a href="page.php?type=terms">Điều khoản sử dụng</a></li>
-                            <li><a href="page.php?type=contact">Thông tin liên hệ</a></li>
-                            <?php if($_SESSION['login'])
-{?>
+                            <li><a href="privacy.php">Chính sách bảo mật</a></li>
+                            <li><a href="terms.php">Điều khoản sử dụng</a></li>
+                            <li><a href="contact.php">Thông tin liên hệ</a></li>
+                            <?php if ($_SESSION['login']) { ?>
                             <li>Cần trợ giúp?<a href="#" data-toggle="modal" data-target="#myModal3"> / Viết cho chúng
                                     tôi </a>
                             </li>
