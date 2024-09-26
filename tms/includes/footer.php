@@ -14,6 +14,6 @@
             </ul>
         </div>
         <p class="wow zoomIn animated animated" data-wow-delay=".5s"
-            style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"> TMS . All Rights Reserved </p>
+            style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"> All Rights Reserved </p>
     </div>
 </div>

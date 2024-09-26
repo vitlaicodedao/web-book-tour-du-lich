@@ -29,7 +29,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 	<html>
 
 	<head>
-		<title>TMS | Admin Profile</title>
+		<title>Admin Profile</title>
 
 		<script type="application/x-javascript">
 			addEventListener("load", function() {

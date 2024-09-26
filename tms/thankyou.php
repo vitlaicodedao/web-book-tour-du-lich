@@ -7,7 +7,7 @@ include('includes/config.php');
 <html>
 
 <head>
-    <title>TMS | Confirmation </title>
+    <title>Confirmation </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script type="applijewelleryion/x-javascript">
@@ -36,7 +36,7 @@ include('includes/config.php');
     <div class="banner-1 ">
         <div class="container">
             <h1 class="wow zoomIn animated animated" data-wow-delay=".5s"
-                style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"> TMS- Tourism Management
+                style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"> Tourism Management
                 System</h1>
         </div>
     </div>

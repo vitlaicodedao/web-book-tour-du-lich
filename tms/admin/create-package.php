@@ -37,7 +37,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 	<html>
 
 	<head>
-		<title>TMS | Admin Package Creation</title>
+		<title>Admin Package Creation</title>
 
 		<script type="application/x-javascript">
 			addEventListener("load", function() {

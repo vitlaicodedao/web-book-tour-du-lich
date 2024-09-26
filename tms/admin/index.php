@@ -25,7 +25,7 @@ if (isset($_POST['login'])) {
 <html>
 
 <head>
-	<title>TMS | Admin Sign in</title>
+	<title>Admin Sign in</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<script type="application/x-javascript">
@@ -63,27 +63,27 @@ if (isset($_POST['login'])) {
 				<h2>Sign In</h2>
 				<form method="post">
 					<div class="username">
-						<span class="username">Username:</span>
+						<span class="username">Tên đăng nhập:</span>
 						<input type="text" name="username" class="name" placeholder="" required="">
 						<div class="clearfix"></div>
 					</div>
 					<div>
-						<a href="forgot-password.php" style="color: #fff;">Forgot Password</a>
+						<a href="forgot-password.php" style="color: #fff;">Quên mật khẩu</a>
 					</div>
 					<br>
 					<div class="password-agileits">
-						<span class="username">Password:</span>
+						<span class="username">Mật khẩu:</span>
 						<input type="password" name="password" class="password" placeholder="" required="">
 						<div class="clearfix"></div>
 					</div>
 
 					<div class="login-w3">
-						<input type="submit" class="login" name="login" value="Sign In">
+						<input type="submit" class="login" name="login" value="Đăng nhập">
 					</div>
 					<div class="clearfix"></div>
 				</form>
 				<div class="back">
-					<a href="../index.php" style="color: #fff;">Back to home</a>
+					<a href="../index.php" style="color: #fff;">Trở về trang chủ</a>
 				</div>
 
 			</div>

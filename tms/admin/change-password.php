@@ -33,7 +33,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 	<html>
 
 	<head>
-		<title>TMS | Admin Change Password</title>
+		<title>Admin Change Password</title>
 
 		<script type="application/x-javascript">
 			addEventListener("load", function() {
