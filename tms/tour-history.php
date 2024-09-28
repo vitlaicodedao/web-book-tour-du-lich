@@ -110,7 +110,7 @@ if (strlen($_SESSION['login']) == 0) {
         <div class="privacy">
             <div class="container">
                 <h3 class="wow fadeInDown animated animated" data-wow-delay=".5s"
-                    style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">My Tour History</h3>
+                    style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Các tour đã đặt</h3>
                 <form name="chngpwd" method="post" onSubmit="return valid();">
                     <?php if ($error) { ?><div class="errorWrap">
                         <strong>ERROR</strong>:<?php echo htmlentities($error); ?>
@@ -119,16 +119,16 @@ if (strlen($_SESSION['login']) == 0) {
                     </div><?php } ?>
                     <p>
                     <table border="1" width="100%" class="table">
-                        <tr align="center">
+                        <tr align="center" class="tr-row">
                             <th>#</th>
-                            <th>Booking Id</th>
-                            <th>Package Name</th>
-                            <th>From</th>
-                            <th>To</th>
-                            <th>Comment</th>
-                            <th>Status</th>
-                            <th>Booking Date</th>
-                            <th>Action</th>
+                            <th>Id</th>
+                            <th>Tên gói dịch vụ</th>
+                            <th>Từ ngày</th>
+                            <th>Đến ngày</th>
+                            <th>Lưu ý</th>
+                            <th>Tình trạng</th>
+                            <th>Ngày book</th>
+                            <th></th>
                         </tr>
                         <?php
 
@@ -168,7 +168,7 @@ if (strlen($_SESSION['login']) == 0) {
                                         ?><td>Cancelled</td>
                             <?php } else { ?>
                             <td><a href="tour-history.php?bkid=<?php echo htmlentities($result->bookid); ?>"
-                                    onclick="return confirm('Do you really want to cancel booking')">Cancel</a></td>
+                                    onclick="return confirm('Bạn có thật sự muốn huỷ không?')">Huỷ</a></td>
                             <?php } ?>
                         </tr>
                         <?php $cnt = $cnt + 1;

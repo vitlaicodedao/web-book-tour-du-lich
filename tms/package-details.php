@@ -30,7 +30,7 @@ if (isset($_POST['submit2'])) {
 <html>
 
 <head>
-    <title>Package Details</title>
+    <title>Chi tiết gói dịch vụ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script type="applijewelleryion/x-javascript">
@@ -109,16 +109,16 @@ if (isset($_POST['submit2'])) {
 
             <form name="book" method="post">
                 <div class="selectroom_top">
-                    <div class="col-md-4 selectroom_left wow fadeInLeft animated" data-wow-delay=".5s">
+                    <div class="col-md-4 select room_left wow fadeInLeft animated" data-wow-delay=".5s">
                         <img src="admin/pacakgeimages/<?php echo htmlentities($result->PackageImage); ?>"
                             class="img-responsive" alt="">
                     </div>
                     <div class="col-md-8 selectroom_right wow fadeInRight animated" data-wow-delay=".5s">
                         <h2><?php echo htmlentities($result->PackageName); ?></h2>
                         <p class="dow">#PKG-<?php echo htmlentities($result->PackageId); ?></p>
-                        <p><b>Package Type :</b> <?php echo htmlentities($result->PackageType); ?></p>
-                        <p><b>Package Location :</b> <?php echo htmlentities($result->PackageLocation); ?></p>
-                        <p><b>Features</b> <?php echo htmlentities($result->PackageFetures); ?></p>
+                        <p><b>Loại hình:</b> <?php echo htmlentities($result->PackageType); ?></p>
+                        <p><b>Địa chỉ:</b> <?php echo htmlentities($result->PackageLocation); ?></p>
+                        <p><b>Đặc trưng: </b> <?php echo htmlentities($result->PackageFetures); ?></p>
                         <div class="ban-bottom">
                             <div class="bnr-right">
                                 <label class="inputLabel">From</label>
@@ -137,19 +137,19 @@ if (isset($_POST['submit2'])) {
                             <h3>USD.800</h3>
                         </div> -->
                     </div>
-                    <h3>Package Details</h3>
+                    <h3>Chi tiết gói dịch vụ</h3>
                     <p style="padding-top: 1%"><?php echo htmlentities($result->PackageDetails); ?> </p>
                     <div class="clearfix"></div>
                 </div>
                 <div class="selectroom_top">
-                    <h2>Travels</h2>
+                    <!-- <h2>Travels</h2> -->
                     <div class="selectroom-info animated wow fadeInUp animated" data-wow-duration="1200ms"
                         data-wow-delay="500ms"
                         style="visibility: visible; animation-duration: 1200ms; animation-delay: 500ms; animation-name: fadeInUp; margin-top: -70px">
                         <ul>
 
                             <li class="spe">
-                                <label class="inputLabel">Comment</label>
+                                <label class="inputLabel">Lưu ý</label>
                                 <input class="special" type="text" name="comment" required="">
                             </li>
                             <?php if ($_SESSION['login']) { ?>

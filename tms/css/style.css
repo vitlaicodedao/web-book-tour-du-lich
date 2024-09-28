@@ -5538,3 +5538,7 @@ ul.nav.navbar-nav li a {
     -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
 }
+
+.tr-row th {
+    text-align: center;
+}
