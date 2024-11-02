@@ -91,7 +91,7 @@ if (strlen($_SESSION['alogin']) == 0) {
             </div>
             <!--heder end here-->
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.php">Home</a><i class="fa fa-angle-right"></i>Create Package
+                <li class="breadcrumb-item"><a href="index.php">Trang chủ</a><i class="fa fa-angle-right"></i>Tạo gói
                 </li>
             </ol>
             <!--grid-->
@@ -99,7 +99,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 
                 <!---->
                 <div class="grid-form1">
-                    <h3>Create Package</h3>
+                    <h3>Tạo gói du lịch</h3>
                     <?php if ($error) { ?><div class="errorWrap">
                         <strong>ERROR</strong>:<?php echo htmlentities($error); ?>
                     </div><?php } else if ($msg) { ?><div class="succWrap">
@@ -109,56 +109,55 @@ if (strlen($_SESSION['alogin']) == 0) {
                         <div class="tab-pane active" id="horizontal-form">
                             <form class="form-horizontal" name="package" method="post" enctype="multipart/form-data">
                                 <div class="form-group">
-                                    <label for="focusedinput" class="col-sm-2 control-label">Package Name</label>
+                                    <label for="focusedinput" class="col-sm-2 control-label">Tên gói du lịch</label>
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control1" name="packagename" id="packagename"
-                                            placeholder="Create Package" required>
+                                            placeholder="Tên gói du lịch" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="focusedinput" class="col-sm-2 control-label">Package Type</label>
+                                    <label for="focusedinput" class="col-sm-2 control-label">Loại gói du lịch</label>
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control1" name="packagetype" id="packagetype"
-                                            placeholder=" Package Type eg- Family Package / Couple Package" required>
+                                            placeholder="Loại gói du lịch (Gia đình - Cá nhân - Cặp đôi)" required>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="focusedinput" class="col-sm-2 control-label">Package Location</label>
+                                    <label for="focusedinput" class="col-sm-2 control-label">Đia điểm</label>
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control1" name="packagelocation"
-                                            id="packagelocation" placeholder=" Package Location" required>
+                                            id="packagelocation" placeholder="Đia điểm" required>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="focusedinput" class="col-sm-2 control-label">Package Price in
-                                        VND</label>
+                                    <label for="focusedinput" class="col-sm-2 control-label">Giá gói</label>
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control1" name="packageprice" id="packageprice"
-                                            placeholder=" Package Price is VND" required>
+                                            placeholder=" Giá gói (VND)" required>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="focusedinput" class="col-sm-2 control-label">Package Features</label>
+                                    <label for="focusedinput" class="col-sm-2 control-label">Phương tiện di
+                                        chuyển</label>
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control1" name="packagefeatures"
-                                            id="packagefeatures"
-                                            placeholder="Package Features Eg-free Pickup-drop facility" required>
+                                            id="packagefeatures" placeholder="Phương tiện di chuyển" required>
                                     </div>
                                 </div>
 
 
                                 <div class="form-group">
-                                    <label for="focusedinput" class="col-sm-2 control-label">Package Details</label>
+                                    <label for="focusedinput" class="col-sm-2 control-label">Lịch trình chi tiết</label>
                                     <div class="col-sm-8">
                                         <textarea class="form-control" rows="5" cols="50" name="packagedetails"
-                                            id="packagedetails" placeholder="Package Details" required></textarea>
+                                            id="packagedetails" placeholder="Lịch trình chi tiết" required></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="focusedinput" class="col-sm-2 control-label">Package Image</label>
+                                    <label for="focusedinput" class="col-sm-2 control-label">Hình ảnh</label>
                                     <div class="col-sm-8">
                                         <input type="file" name="packageimage" id="packageimage" required>
                                     </div>
@@ -166,9 +165,9 @@ if (strlen($_SESSION['alogin']) == 0) {
 
                                 <div class="row">
                                     <div class="col-sm-8 col-sm-offset-2">
-                                        <button type="submit" name="submit" class="btn-primary btn">Create</button>
+                                        <button type="submit" name="submit" class="btn-primary btn">Tạo</button>
 
-                                        <button type="reset" class="btn-inverse btn">Reset</button>
+                                        <button type="reset" class="btn-inverse btn">Khôi phục</button>
                                     </div>
                                 </div>
 

@@ -71,7 +71,7 @@ include('includes/config.php');
                     <h4><?php echo htmlentities($result->PackageName); ?></h4>
                     <h6>Loại hình: <?php echo htmlentities($result->PackageType); ?></h6>
                     <p><b>Địa chỉ: </b> <?php echo htmlentities($result->PackageLocation); ?></p>
-                    <p><b>Đặc trưng: </b> <?php echo htmlentities($result->PackageFetures); ?></p>
+                    <p><b>Phương tiện: </b> <?php echo htmlentities($result->PackageFetures); ?></p>
                 </div>
                 <div class="col-md-3 room-right wow fadeInRight animated" data-wow-delay=".5s">
                     <h5>VND <?php echo htmlentities($result->PackagePrice); ?></h5>
@@ -85,7 +85,7 @@ include('includes/config.php');
             } ?>
 
 
-            <div><a href="package-list.php" class="view">View More Packages</a></div>
+            <div><a href="package-list.php" class="view">Xem thêm</a></div>
         </div>
         <div class="clearfix"></div>
     </div>

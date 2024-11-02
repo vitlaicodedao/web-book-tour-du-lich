@@ -61,7 +61,7 @@
                     <nav class="cl-effect-1">
                         <ul class="nav navbar-nav">
                             <li><a href="index.php">TRANG CHỦ</a></li>
-                            <li><a href="about.php">CHI TIẾT</a></li>
+                            <!-- <li><a href="about.php">CHI TIẾT</a></li> -->
                             <li><a href="package-list.php">GÓI DU LỊCH</a></li>
                             <li><a href="privacy.php">CHÍNH SÁCH BẢO MẬT</a></li>
                             <li><a href="terms.php">ĐIỀU KHOẢN SỬ DỤNG</a></li>

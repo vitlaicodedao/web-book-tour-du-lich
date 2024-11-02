@@ -3,7 +3,7 @@
 define('DB_HOST','localhost');
 define('DB_USER','root');
 define('DB_PASS','');
-define('DB_NAME','tms');
+define('DB_NAME','web-book-tour-du-lich');
 // Establish database connection.
 try
 {

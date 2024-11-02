@@ -50,36 +50,36 @@ if (isset($_POST['submit50'])) {
     <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
     <script src="js/wow.min.js"></script>
     <script>
-        new WOW().init();
+    new WOW().init();
     </script>
     <script type="text/javascript">
-        function valid() {
-            if (document.chngpwd.newpassword.value != document.chngpwd.confirmpassword.value) {
-                alert("New Password and Confirm Password Field do not match  !!");
-                document.chngpwd.confirmpassword.focus();
-                return false;
-            }
-            return true;
+    function valid() {
+        if (document.chngpwd.newpassword.value != document.chngpwd.confirmpassword.value) {
+            alert("New Password and Confirm Password Field do not match  !!");
+            document.chngpwd.confirmpassword.focus();
+            return false;
         }
+        return true;
+    }
     </script>
     <style>
-        .errorWrap {
-            padding: 10px;
-            margin: 0 0 20px 0;
-            background: #fff;
-            border-left: 4px solid #dd3d36;
-            -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
-            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
-        }
+    .errorWrap {
+        padding: 10px;
+        margin: 0 0 20px 0;
+        background: #fff;
+        border-left: 4px solid #dd3d36;
+        -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+    }
 
-        .succWrap {
-            padding: 10px;
-            margin: 0 0 20px 0;
-            background: #fff;
-            border-left: 4px solid #5cb85c;
-            -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
-            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
-        }
+    .succWrap {
+        padding: 10px;
+        margin: 0 0 20px 0;
+        background: #fff;
+        border-left: 4px solid #5cb85c;
+        -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+    }
     </style>
 </head>
 
@@ -90,7 +90,8 @@ if (isset($_POST['submit50'])) {
         <div class="banner-1 ">
             <div class="container">
                 <h1 class="wow zoomIn animated animated" data-wow-delay=".5s"
-                    style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">Hệ thống quản lý tour du lịch</h1>
+                    style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">Hệ thống quản lý tour du
+                    lịch</h1>
             </div>
         </div>
         <!--- /banner-1 ---->
@@ -98,40 +99,40 @@ if (isset($_POST['submit50'])) {
         <div class="privacy">
             <div class="container">
                 <h3 class="wow fadeInDown animated animated" data-wow-delay=".5s"
-                    style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Recover Password
+                    style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Khôi phục mật khẩu
                 </h3>
                 <form name="chngpwd" method="post" onSubmit="return valid();">
                     <?php if ($error) { ?><div class="errorWrap">
-                            <strong>ERROR</strong>:<?php echo htmlentities($error); ?>
-                        </div><?php } else if ($msg) { ?><div class="succWrap">
-                            <strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?>
-                        </div><?php } ?>
+                        <strong>LỖI</strong>:<?php echo htmlentities($error); ?>
+                    </div><?php } else if ($msg) { ?><div class="succWrap">
+                        <strong>THÀNH CÔNG</strong>:<?php echo htmlentities($msg); ?>
+                    </div><?php } ?>
                     <p style="width: 350px;">
 
-                        <b>Email id</b> <input type="email" name="email" class="form-control" id="email"
-                            placeholder="Reg Email id" required="">
+                        <b>Email</b> <input type="email" name="email" class="form-control" id="email"
+                            placeholder="Email" required="">
                     </p>
 
                     <p style="width: 350px;">
 
-                        <b>Mobile No</b> <input type="text" name="mobile" class="form-control" id="mobile"
-                            placeholder="Reg Mobile no" required="">
+                        <b>Số điện thoại</b> <input type="text" name="mobile" class="form-control" id="mobile"
+                            placeholder="Số điện thoại" required="">
                     </p>
 
                     <p style="width: 350px;">
-                        <b>New Password</b>
+                        <b>Mật khẩu mới</b>
                         <input type="password" class="form-control" name="newpassword" id="newpassword"
-                            placeholder="New Password" required="">
+                            placeholder="Mật khẩu mới" required="">
                     </p>
 
                     <p style="width: 350px;">
-                        <b>Confirm Password</b>
+                        <b>Xác nhận mật khẩu</b>
                         <input type="password" class="form-control" name="confirmpassword" id="confirmpassword"
-                            placeholder="Confrim Password" required="">
+                            placeholder="Xác nhận mật khẩu" required="">
                     </p>
 
                     <p style="width: 350px;">
-                        <button type="submit" name="submit50" class="btn-primary btn">Change</button>
+                        <button type="submit" name="submit50" class="btn-primary btn">Thay đổi</button>
                     </p>
                 </form>
 

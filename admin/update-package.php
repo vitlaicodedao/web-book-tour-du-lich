@@ -89,19 +89,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
             <!--heder end here-->
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.php">Home</a><i class="fa fa-angle-right"></i>Update Tour
-                    Package </li>
+                <li class="breadcrumb-item"><a href="index.php">Home</a><i class="fa fa-angle-right"></i>Cập nhật
+                    tour du lịch</li>
             </ol>
             <!--grid-->
             <div class="grid-form">
 
                 <!---->
                 <div class="grid-form1">
-                    <h3>Update Package</h3>
+                    <h3>Cập nhật tour</h3>
                     <?php if ($error) { ?><div class="errorWrap">
-                        <strong>ERROR</strong>:<?php echo htmlentities($error); ?>
+                        <strong>LỖI</strong>:<?php echo htmlentities($error); ?>
                     </div><?php } else if ($msg) { ?><div class="succWrap">
-                        <strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?>
+                        <strong>THÀNH CÔNG</strong>:<?php echo htmlentities($msg); ?>
                     </div><?php } ?>
                     <div class="tab-content">
                         <div class="tab-pane active" id="horizontal-form">
@@ -119,7 +119,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                             <form class="form-horizontal" name="package" method="post" enctype="multipart/form-data">
                                 <div class="form-group">
-                                    <label for="focusedinput" class="col-sm-2 control-label">Package Name</label>
+                                    <label for="focusedinput" class="col-sm-2 control-label">Tên tour</label>
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control1" name="packagename" id="packagename"
                                             placeholder="Create Package"
@@ -127,7 +127,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="focusedinput" class="col-sm-2 control-label">Package Type</label>
+                                    <label for="focusedinput" class="col-sm-2 control-label">Loại hình</label>
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control1" name="packagetype" id="packagetype"
                                             placeholder=" Package Type eg- Family Package / Couple Package"
@@ -136,7 +136,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="focusedinput" class="col-sm-2 control-label">Package Location</label>
+                                    <label for="focusedinput" class="col-sm-2 control-label">Địa điểm</label>
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control1" name="packagelocation"
                                             id="packagelocation" placeholder=" Package Location"
@@ -145,8 +145,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="focusedinput" class="col-sm-2 control-label">Package Price in
-                                        VND</label>
+                                    <label for="focusedinput" class="col-sm-2 control-label">Giá tour (VND)</label>
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control1" name="packageprice" id="packageprice"
                                             placeholder=" Package Price is VND"
@@ -155,7 +154,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="focusedinput" class="col-sm-2 control-label">Package Features</label>
+                                    <label for="focusedinput" class="col-sm-2 control-label">Phương tiện đi lại</label>
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control1" name="packagefeatures"
                                             id="packagefeatures"
@@ -166,7 +165,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
                                 <div class="form-group">
-                                    <label for="focusedinput" class="col-sm-2 control-label">Package Details</label>
+                                    <label for="focusedinput" class="col-sm-2 control-label">Lịch trình chi tiết</label>
                                     <div class="col-sm-8">
                                         <textarea class="form-control" rows="5" cols="50" name="packagedetails"
                                             id="packagedetails" placeholder="Package Details"
@@ -174,7 +173,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="focusedinput" class="col-sm-2 control-label">Package Image</label>
+                                    <label for="focusedinput" class="col-sm-2 control-label">Hình ảnh</label>
                                     <div class="col-sm-8">
                                         <img src="pacakgeimages/<?php echo htmlentities($result->PackageImage); ?>"
                                             width="200">&nbsp;&nbsp;&nbsp;<a
@@ -184,7 +183,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="focusedinput" class="col-sm-2 control-label">Last Updation Date</label>
+                                    <label for="focusedinput" class="col-sm-2 control-label">Ngày cập nhật gần
+                                        nhất</label>
                                     <div class="col-sm-8">
                                         <?php echo htmlentities($result->UpdationDate); ?>
                                     </div>
@@ -194,7 +194,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                                 <div class="row">
                                     <div class="col-sm-8 col-sm-offset-2">
-                                        <button type="submit" name="submit" class="btn-primary btn">Update</button>
+                                        <button type="submit" name="submit" class="btn-primary btn">Cập nhật</button>
                                     </div>
                                 </div>
 

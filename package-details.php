@@ -118,15 +118,15 @@ if (isset($_POST['submit2'])) {
                         <p class="dow">#PKG-<?php echo htmlentities($result->PackageId); ?></p>
                         <p><b>Loại hình:</b> <?php echo htmlentities($result->PackageType); ?></p>
                         <p><b>Địa chỉ:</b> <?php echo htmlentities($result->PackageLocation); ?></p>
-                        <p><b>Đặc trưng: </b> <?php echo htmlentities($result->PackageFetures); ?></p>
+                        <p><b>Phương tiện: </b> <?php echo htmlentities($result->PackageFetures); ?></p>
                         <div class="ban-bottom">
                             <div class="bnr-right">
-                                <label class="inputLabel">From</label>
+                                <label class="inputLabel">Từ</label>
                                 <input class="date" id="datepicker" type="text" placeholder="dd-mm-yyyy" name="fromdate"
                                     required="">
                             </div>
                             <div class="bnr-right">
-                                <label class="inputLabel">To</label>
+                                <label class="inputLabel">Đến</label>
                                 <input class="date" id="datepicker1" type="text" placeholder="dd-mm-yyyy" name="todate"
                                     required="">
                             </div>

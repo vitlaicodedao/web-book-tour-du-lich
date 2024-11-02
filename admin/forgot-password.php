@@ -37,13 +37,13 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script type="application/x-javascript">
-        addEventListener("load", function() {
-            setTimeout(hideURLbar, 0);
-        }, false);
+    addEventListener("load", function() {
+        setTimeout(hideURLbar, 0);
+    }, false);
 
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    }
     </script>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
@@ -62,14 +62,14 @@ if (isset($_POST['submit'])) {
     <!-- lined-icons -->
     <link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
     <script type="text/javascript">
-        function valid() {
-            if (document.chngpwd.newpassword.value != document.chngpwd.confirmpassword.value) {
-                alert("New Password and Confirm Password Field do not match  !!");
-                document.chngpwd.confirmpassword.focus();
-                return false;
-            }
-            return true;
+    function valid() {
+        if (document.chngpwd.newpassword.value != document.chngpwd.confirmpassword.value) {
+            alert("New Password and Confirm Password Field do not match  !!");
+            document.chngpwd.confirmpassword.focus();
+            return false;
         }
+        return true;
+    }
     </script>
     <!-- //lined-icons -->
 </head>
@@ -78,30 +78,30 @@ if (isset($_POST['submit'])) {
     <div class="main-wthree">
         <div class="container">
             <div class="sin-w3-agile">
-                <h2>Forgot Password</h2>
+                <h2>Quên mật khẩu</h2>
                 <form name="chngpwd" method="post" onSubmit="return valid();">
                     <div class="username">
-                        <span class="username">Email id:</span>
-                        <input type="email" name="email" class="name" placeholder="Reg Email id" required="">
+                        <span class="username">Email</span>
+                        <input type="email" name="email" class="name" placeholder="Email" required="">
                         <div class="clearfix"></div>
                     </div>
                     <div>
                         <div class="username">
-                            <span class="username">Mobile No:</span>
-                            <input type="text" name="mobile" class="name" placeholder="Reg Mobile Number" required=""
+                            <span class="username">Số điện thoại</span>
+                            <input type="text" name="mobile" class="name" placeholder="Số điện thoại" required=""
                                 maxlength="10">
                             <div class="clearfix"></div>
                         </div>
                         <div class="password-agileits">
-                            <span class="username">New Password:</span>
+                            <span class="username">Mật khẩu mới</span>
                             <input type="password" class="password" name="newpassword" id="newpassword"
                                 placeholder="New Password" required="">
                             <div class="clearfix"></div>
                         </div>
                         <div class="password-agileits">
-                            <span class="username">Confirm Password:</span>
+                            <span class="username">Xác nhận</span>
                             <input type="password" name="confirmpassword" id="confirmpassword" class="password"
-                                placeholder="Confirm Password" required="">
+                                placeholder="Xác nhận mật khẩu" required="">
                             <div class="clearfix"></div>
                         </div>
                         <div class="login-w3">
@@ -110,7 +110,7 @@ if (isset($_POST['submit'])) {
                         <div class="clearfix"></div>
                 </form>
                 <div class="back">
-                    <a href="index.php" style="color: #fff;">Signin</a>
+                    <a href="index.php" style="color: #fff;">Đăng nhập</a>
                 </div>
 
             </div>
