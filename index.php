@@ -75,6 +75,9 @@ include('includes/config.php');
                         </div>
                         <div class="col-md-3 room-right wow fadeInRight animated" data-wow-delay=".5s">
                             <h5>VND <?php echo htmlentities($result->giatien); ?></h5>
+                            <h6 style="text-decoration: line-through;">VND
+                                <?php echo htmlentities($result->giagiam); ?>
+                            </h6>
                             <a href="package-details.php?pkgid=<?php echo htmlentities($result->magoi); ?>" class="view">Chi
                                 tiết</a>
                         </div>
