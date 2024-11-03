@@ -6,24 +6,24 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $mobile = $_POST['mobile'];
     $newpassword = md5($_POST['newpassword']);
-    $sql = "SELECT EmailId FROM admin WHERE EmailId=:email and MobileNumber=:mobile";
+    $sql = "SELECT email FROM admin WHERE email=:email and sodienthoai=:mobile";
     $query = $dbh->prepare($sql);
     $query->bindParam(':email', $email, PDO::PARAM_STR);
     $query->bindParam(':mobile', $mobile, PDO::PARAM_STR);
     $query->execute();
     $results = $query->fetchAll(PDO::FETCH_OBJ);
     if ($query->rowCount() > 0) {
-        $con = "update admin set Password=:newpassword where EmailId=:email and MobileNumber=:mobile";
+        $con = "update admin set matkhau=:newpassword where email=:email and sodienthoai=:mobile";
         $chngpwd1 = $dbh->prepare($con);
         $chngpwd1->bindParam(':email', $email, PDO::PARAM_STR);
         $chngpwd1->bindParam(':mobile', $mobile, PDO::PARAM_STR);
         $chngpwd1->bindParam(':newpassword', $newpassword, PDO::PARAM_STR);
         $chngpwd1->execute();
 
-        echo "<script>alert('Your Password succesfully changed');</script>";
+        echo "<script>alert('Mật khẩu được thay đổi thành công.');</script>";
     } else {
 
-        echo "<script>alert('Email id or Mobile no is invalid');</script>";
+        echo "<script>alert('Email hoặc số diện thoại không đúng.');</script>";
     }
 }
 
@@ -37,13 +37,13 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script type="application/x-javascript">
-    addEventListener("load", function() {
-        setTimeout(hideURLbar, 0);
-    }, false);
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
 
-    function hideURLbar() {
-        window.scrollTo(0, 1);
-    }
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
     </script>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
@@ -62,14 +62,14 @@ if (isset($_POST['submit'])) {
     <!-- lined-icons -->
     <link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
     <script type="text/javascript">
-    function valid() {
-        if (document.chngpwd.newpassword.value != document.chngpwd.confirmpassword.value) {
-            alert("New Password and Confirm Password Field do not match  !!");
-            document.chngpwd.confirmpassword.focus();
-            return false;
+        function valid() {
+            if (document.chngpwd.newpassword.value != document.chngpwd.confirmpassword.value) {
+                alert("New Password and Confirm Password Field do not match  !!");
+                document.chngpwd.confirmpassword.focus();
+                return false;
+            }
+            return true;
         }
-        return true;
-    }
     </script>
     <!-- //lined-icons -->
 </head>

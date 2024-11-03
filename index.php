@@ -27,7 +27,7 @@ include('includes/config.php');
     <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
     <script src="js/wow.min.js"></script>
     <script>
-    new WOW().init();
+        new WOW().init();
     </script>
     <!--//end-animate-->
 </head>
@@ -55,31 +55,31 @@ include('includes/config.php');
             <h3>Các gói du lịch</h3>
 
 
-            <?php $sql = "SELECT * from tbltourpackages order by rand() limit 4";
+            <?php $sql = "SELECT * from goidulich order by rand() limit 4";
             $query = $dbh->prepare($sql);
             $query->execute();
             $results = $query->fetchAll(PDO::FETCH_OBJ);
             $cnt = 1;
             if ($query->rowCount() > 0) {
                 foreach ($results as $result) {    ?>
-            <div class="rom-btm">
-                <div class="col-md-3 room-left wow fadeInLeft animated" data-wow-delay=".5s">
-                    <img src="admin/pacakgeimages/<?php echo htmlentities($result->PackageImage); ?>"
-                        class="img-responsive" alt="">
-                </div>
-                <div class="col-md-6 room-midle wow fadeInUp animated" data-wow-delay=".5s">
-                    <h4><?php echo htmlentities($result->PackageName); ?></h4>
-                    <h6>Loại hình: <?php echo htmlentities($result->PackageType); ?></h6>
-                    <p><b>Địa chỉ: </b> <?php echo htmlentities($result->PackageLocation); ?></p>
-                    <p><b>Phương tiện: </b> <?php echo htmlentities($result->PackageFetures); ?></p>
-                </div>
-                <div class="col-md-3 room-right wow fadeInRight animated" data-wow-delay=".5s">
-                    <h5>VND <?php echo htmlentities($result->PackagePrice); ?></h5>
-                    <a href="package-details.php?pkgid=<?php echo htmlentities($result->PackageId); ?>" class="view">Chi
-                        tiết</a>
-                </div>
-                <div class="clearfix"></div>
-            </div>
+                    <div class="rom-btm">
+                        <div class="col-md-3 room-left wow fadeInLeft animated" data-wow-delay=".5s">
+                            <img src="admin/pacakgeimages/<?php echo htmlentities($result->anh); ?>" class="img-responsive"
+                                alt="">
+                        </div>
+                        <div class="col-md-6 room-midle wow fadeInUp animated" data-wow-delay=".5s">
+                            <h4><?php echo htmlentities($result->tengoi); ?></h4>
+                            <h6>Loại hình: <?php echo htmlentities($result->kieugoi); ?></h6>
+                            <p><b>Địa chỉ: </b> <?php echo htmlentities($result->diadiem); ?></p>
+                            <p><b>Phương tiện: </b> <?php echo htmlentities($result->phuongtien); ?></p>
+                        </div>
+                        <div class="col-md-3 room-right wow fadeInRight animated" data-wow-delay=".5s">
+                            <h5>VND <?php echo htmlentities($result->giatien); ?></h5>
+                            <a href="package-details.php?pkgid=<?php echo htmlentities($result->magoi); ?>" class="view">Chi
+                                tiết</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
 
             <?php }
             } ?>

@@ -8,7 +8,7 @@ if (isset($_POST['submit1'])) {
     $mobile = $_POST['mobileno'];
     $subject = $_POST['subject'];
     $description = $_POST['description'];
-    $sql = "INSERT INTO  tblenquiry(FullName,EmailId,MobileNumber,Subject,Description) VALUES(:fname,:email,:mobile,:subject,:description)";
+    $sql = "INSERT INTO  yeucau(hoten,email,sodienthoai,chude,mota) VALUES(:fname,:email,:mobile,:subject,:description)";
     $query = $dbh->prepare($sql);
     $query->bindParam(':fname', $fname, PDO::PARAM_STR);
     $query->bindParam(':email', $email, PDO::PARAM_STR);
@@ -79,7 +79,8 @@ if (isset($_POST['submit1'])) {
         <div class="banner-1 ">
             <div class="container">
                 <h1 class="wow zoomIn animated animated" data-wow-delay=".5s"
-                    style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">Hệ thống quản lý tour du lịch</h1>
+                    style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">Hệ thống quản lý tour du
+                    lịch</h1>
             </div>
         </div>
         <!--- /banner-1 ---->

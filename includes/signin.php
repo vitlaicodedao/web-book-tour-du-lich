@@ -3,7 +3,7 @@ session_start();
 if (isset($_POST['signin'])) {
 	$email = $_POST['email'];
 	$password = md5($_POST['password']);
-	$sql = "SELECT EmailId,Password FROM tblusers WHERE EmailId=:email and Password=:password";
+	$sql = "SELECT email,matkhau FROM khachhang WHERE email=:email and matkhau=:password";
 	$query = $dbh->prepare($sql);
 	$query->bindParam(':email', $email, PDO::PARAM_STR);
 	$query->bindParam(':password', $password, PDO::PARAM_STR);

@@ -10,14 +10,14 @@ if (strlen($_SESSION['alogin']) == 0) {
         $bid = intval($_GET['bkid']);
         $status = 2;
         $cancelby = 'a';
-        $sql = "UPDATE tblbooking SET status=:status,CancelledBy=:cancelby WHERE  BookingId=:bid";
+        $sql = "UPDATE datcho SET tinhtrang=:status,duochuyboi=:cancelby WHERE  madat=:bid";
         $query = $dbh->prepare($sql);
         $query->bindParam(':status', $status, PDO::PARAM_STR);
         $query->bindParam(':cancelby', $cancelby, PDO::PARAM_STR);
         $query->bindParam(':bid', $bid, PDO::PARAM_STR);
         $query->execute();
 
-        $msg = "Booking Cancelled successfully";
+        $msg = "Đã huỷ thành công.";
     }
 
 
@@ -25,12 +25,12 @@ if (strlen($_SESSION['alogin']) == 0) {
         $bcid = intval($_GET['bckid']);
         $status = 1;
         $cancelby = 'a';
-        $sql = "UPDATE tblbooking SET status=:status WHERE BookingId=:bcid";
+        $sql = "UPDATE datcho SET tinhtrang=:status WHERE madat=:bcid";
         $query = $dbh->prepare($sql);
         $query->bindParam(':status', $status, PDO::PARAM_STR);
         $query->bindParam(':bcid', $bcid, PDO::PARAM_STR);
         $query->execute();
-        $msg = "Booking Confirm successfully";
+        $msg = "Đã xác nhận thành công.";
     }
 
 
@@ -151,9 +151,9 @@ if (strlen($_SESSION['alogin']) == 0) {
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php $sql = "SELECT tblbooking.BookingId as bookid,tblusers.FullName as fname,tblusers.MobileNumber as mnumber,tblusers.EmailId as email,tbltourpackages.PackageName as pckname,tblbooking.PackageId as pid,tblbooking.FromDate as fdate,tblbooking.ToDate as tdate,tblbooking.Comment as comment,tblbooking.status as status,tblbooking.CancelledBy as cancelby,tblbooking.UpdationDate as upddate from  tblbooking
- left join tblusers  on  tblbooking.UserEmail=tblusers.EmailId
- left join tbltourpackages on tbltourpackages.PackageId=tblbooking.PackageId";
+                                <?php $sql = "SELECT datcho.madat as bookid,khachhang.hoten as fname,khachhang.sodienthoai as mnumber,khachhang.email as email,goidulich.tengoi as pckname,datcho.madat as pid,datcho.tungay as fdate,datcho.denngay as tdate,datcho.binhluan as comment,datcho.tinhtrang as status,datcho.duochuyboi as cancelby,datcho.ngaycapnhat as upddate from  datcho
+ left join khachhang  on  datcho.emailnguoidat=khachhang.email
+ left join goidulich on goidulich.magoi=datcho.magoi";
                                     $query = $dbh->prepare($sql);
                                     $query->execute();
                                     $results = $query->fetchAll(PDO::FETCH_OBJ);
@@ -191,9 +191,10 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                 ?><td>Confirmed</td>
                                     <?php } else { ?>
                                     <td><a href="manage-bookings.php?bkid=<?php echo htmlentities($result->bookid); ?>"
-                                            onclick="return confirm('Do you really want to cancel booking')">Huỷ</a>
+                                            onclick="return confirm('Do you really want to cancel booking?')">Huỷ</a>
                                         / <a href="manage-bookings.php?bckid=<?php echo htmlentities($result->bookid); ?>"
-                                            onclick="return confirm('booking has been confirm')">Xác nhận</a></td>
+                                            onclick="return confirm('Do you want to confirm booking?')">Xác nhận</a>
+                                    </td>
                                     <?php } ?>
 
                                 </tr>
